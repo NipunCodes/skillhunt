@@ -1,36 +1,52 @@
-import React from "react"
+import React, { useState } from 'react'
 
-export default function Navbar() {
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const buttonClasses = 'text-black font-semibold text-sm px-2 py-1 hover:bg-gray-100 hover:text-gray-800 rounded-lg transition duration-300'
+    const buttons = (
+        <>
+            <button className={buttonClasses}>What's New</button>
+            <button className={buttonClasses}>Why SkillHunt</button>
+            <button className={buttonClasses}>Find Skills</button>
+            <button className='text-gray-600 font-semibold text-sm px-2 py-1 hover:text-black hover:bg-gray-400 rounded-lg transition duration-300'>Sign in</button>
+            <button className='text-black border-1 font-bold text-base px-2 py-1 hover:bg-gray-800 hover:text-white hover:border-white rounded-lg transition duration-300'>Join</button>
+        </>
+    )
   return (
-    <nav class="flex items-center justify-between flex-wrap bg-white p-6">
-        <div class="flex items-center flex-shrink-0 text-black mr-6">
-            <span class="font-bold text-3xl tracking-tight">SkillHunt</span>
-        </div>
-        <div class="block lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-gray-500">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-            </button>
-        </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-            <div class="text-sm lg:flex-grow">
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-4">
-                    What's new
-                </a>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-4">
-                    Why SkillHunt
-                </a>
-                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-500">
-                    Find talent
-                </a>
-            </div>
-            <div>
-                <a href="#" class="inline-block font-semibold text-sm px-4 py-2 leading-none text-gray-700 hover:border-transparent hover:text-gray-500  mt-4 lg:mt-0">Sign In</a>
-            </div>
-            <div>
-                <a href="#" class="inline-block font-semibold text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-gray-700 mt-4 lg:mt-0">Join</a>
+    <nav className='text-black w-full'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='flex items-center justify-between h-16'>
+                <div className='flex flex-row w-full justify-between'>
+                    <div className='text-3xl font-bold'>
+                        SkillHunt
+                    </div>
+                    <div className='hidden md:block'>
+                        <div className='flex ml-10 items-baseline space-x-2'>
+                            {buttons}
+                        </div>
+                    </div>
+                </div>
+                <div className='md:hidden'>
+                    <button onClick={() => {setIsOpen(!isOpen)}} type='button' className='fill-gray-100'>
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 7H27" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M5 16H27" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M5 25H27" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
+        {
+            isOpen && (
+                <div className='flex flex-col gap-y-2 md:hidden px-4 sm:px-6 pb-2'>
+                    {buttons}
+                </div>
+            )
+        }
     </nav>
-
   )
 }
+
+export default Navbar
