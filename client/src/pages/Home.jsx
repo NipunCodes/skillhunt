@@ -1,7 +1,7 @@
 import Header from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
-import bgImage from '../assets/bg-blue.jpeg'
-import bgDes from '../assets/bg-des.jpg'
+import bgDes from '../assets/large-bg-blur.png'
+import bgBack from '../assets/Hero-Section-crop.jpg'
 import { IoSearchOutline } from "react-icons/io5";
 import CategoryCard from '../components/CategoryCard.jsx'
 import UserReviewCard from '../components/UserReviewCard.jsx'
@@ -87,8 +87,8 @@ const Home = () => {
       <Header />
       
       {/* Hero Section */}
-      <div className='bg-cover bg-center w-full h-auto' style={{backgroundImage: `url(${bgImage})`}}>
-        <div className='max-w-7xl p-15 mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='bg-cover bg-center w-full h-auto' style={{backgroundImage: `url(${bgBack})`}}>
+        <div className='max-w-7xl p-25 mx-auto px-4 sm:px-6 lg:px-8'>
           <div>
             <h1 className='text-white text-2xl'> <span className='font-bold font-mono text-7xl'>Welcome to SkillHunt</span> <br />Sri Lankan's #1 job oppatunity finding platform</h1>
           </div>
