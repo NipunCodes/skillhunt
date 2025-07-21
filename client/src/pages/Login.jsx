@@ -17,14 +17,14 @@ const Login = () => {
                     <div className='flex flex-col justify-center p-5'>
                         <label className='text-xl font-semibold mb-3 font-sans' htmlFor="username">User Name</label>
                         <div className='relative'>
-                            <input className='bg-white border border-gray-300 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-2 focus:ring-blue-400' type="text" name="username" id="username" />
+                            <input className='bg-white border border-gray-300 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="username" id="username" />
                             <FaUserCircle className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl' />
                         </div>
                     </div>
                     <div className='flex flex-col justify-center p-5'>
                         <label className='text-xl font-semibold mb-3 font-sans' htmlFor="password">Password</label>
                         <div className='relative'>
-                            <input className='bg-white border border-gray-300 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-2 focus:ring-blue-400' type="password" name="password" id="password" />
+                            <input className='bg-white border border-gray-300 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="password" name="password" id="password" />
                             <FaKey className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl' />
                         </div>
                     </div>

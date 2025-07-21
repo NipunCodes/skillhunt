@@ -17,8 +17,8 @@ const Navbar = () => {
             <button className={buttonClasses}>What's New</button>
             <button className={buttonClasses}>Why SkillHunt</button>
             <button className={buttonClasses}>Find Skills</button>
-            <button onClick={signIn} className='text-gray-600 font-semibold text-sm px-2 py-1 hover:text-black hover:bg-gray-400 rounded-lg transition duration-300'>Sign in</button>
-            <button className='bg-custom-blue-200 text-black border-1 font-bold text-base px-2 py-1 hover:bg-custom-blue-500 hover:text-white hover:border-white rounded-lg transition duration-300'>Join</button>
+            <button onClick={signIn} className='text-gray-600 font-semibold text-sm px-2 py-1 hover:text-black hover:bg-gray-400 rounded-md transition duration-300'>Sign in</button>
+            <button className='bg-custom-blue-200 text-black border-1 font-bold text-base px-2 py-1 hover:bg-custom-blue-500 hover:text-white hover:border-white rounded-md transition duration-300'>Join</button>
         </>
     )
 
