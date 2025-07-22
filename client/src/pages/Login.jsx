@@ -3,11 +3,13 @@ import Header from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import { FaUserCircle } from "react-icons/fa";
 import { FaKey } from "react-icons/fa6";
+import bgImg from '../assets/Bg-Loginpage.jpg'
 
 const Login = () => {
   return (
     <div>
         <Header />
+        <div className='bg-cover bg-center w-full h-auto' style={{backgroundImage: `url(${bgImg})`}}>
         {/* Page Content */}
         <div className='max-w-7xl p-10 mx-auto px-4 sm:px-6 lg:px-8 h-screen'>
             {/* Login */}
@@ -40,6 +42,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <Footer />
     </div>
