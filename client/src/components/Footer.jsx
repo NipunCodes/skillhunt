@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-300 px-4 md:px-16 lg:px-28 py-8'>
+    <footer className='bg-custom-blue-100 px-4 md:px-16 lg:px-28 py-8'>
         <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             <div>
                 <h1 className='text-3xl font-bold mb-4'>SkillHunt</h1>
