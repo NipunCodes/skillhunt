@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import AboutUs from '../pages/About.jsx'
 
 const Footer = () => {
   return (
@@ -36,7 +38,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <h2 className='text-lg font-bold mb-4'>About Us</h2>
+                <a href="/about"><h2 className='text-lg font-bold mb-4'>About Us</h2></a>
                 <ul className='mb-2'>
                     <li><a href="" className='hover:underline text-black'>About SkillHunt</a></li>
                     <li><a href="" className='hover:underline text-black'>Help & Support</a></li>
