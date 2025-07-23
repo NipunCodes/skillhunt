@@ -1,14 +1,24 @@
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
-    const navigate = useNavigate();
+    const login = useNavigate();
+    const signUp = useNavigate();
+    const home = useNavigate();
 
     const signIn = () => {
-        navigate('/login');
-  }
+        login('/login');
+    }
+
+    const join = () => {
+        signUp('/signup');
+    }
+ 
+    const SkillHunt = () => {
+        home('/');
+    }
 
 
     const buttonClasses = 'text-black font-semibold text-sm px-2 py-1 hover:bg-gray-100 hover:text-gray-800 rounded-lg transition duration-300'
@@ -18,7 +28,7 @@ const Navbar = () => {
             <button className={buttonClasses}>Why SkillHunt</button>
             <button className={buttonClasses}>Find Skills</button>
             <button onClick={signIn} className='text-gray-600 font-semibold text-sm px-2 py-1 hover:text-black hover:bg-gray-400 rounded-md transition duration-300'>Sign in</button>
-            <button className='bg-custom-blue-200 text-black border-1 font-bold text-base px-2 py-1 hover:bg-custom-blue-500 hover:text-white hover:border-white rounded-md transition duration-300'>Join</button>
+            <button onClick={join} className='bg-custom-blue-200 text-black border-1 font-bold text-base px-2 py-1 hover:bg-custom-blue-500 hover:text-white hover:border-white rounded-md transition duration-300'>Join</button>
         </>
     )
 
@@ -28,7 +38,9 @@ const Navbar = () => {
             <div className='flex items-center justify-between h-16'>
                 <div className='flex flex-row w-full justify-between'>
                     <div className='text-3xl font-bold'>
-                        SkillHunt
+                        <button onClick={SkillHunt} className='cursor-pointer'>
+                            SkillHunt
+                        </button>
                     </div>
                     <div className='hidden md:block'>
                         <div className='flex ml-10 items-baseline space-x-2'>
