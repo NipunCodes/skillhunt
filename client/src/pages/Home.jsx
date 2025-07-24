@@ -109,30 +109,22 @@ const Home = () => {
           <div className='w-full mt-4'>
               <div>
                 <Slider {...CategoryCardSettings}>
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
                 </Slider>
               </div>
           </div>

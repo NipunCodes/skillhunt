@@ -3,21 +3,22 @@ import React from 'react'
 import Footer from '../components/Footer.jsx'
 import AboutUs from '../assets/AboutUs.avif';
 import  { useState } from 'react';
+import '../App.css'
 
 const About = () => {
  
   const [showMore, setShowMore] = useState(false);
 
   return (
-    <div>
+    <div className='app'>
         <Header />
         
         {/* Page Content */}
         <div className='max-w-7xl p-10 mx-auto px-4 sm:px-6 lg:px-8 '>
           {/* About us */}
-          <section className='grid gap-8 md:grid-cols-2 bg-custom-blue-500 text-white rounded-xl  '>
-            <div className='p-20 '>
-              <h1  className='text-7xl underline decoration-[3px] underline-offset-4'>Who <br /> we <br /> are</h1>
+          <section className='grid gap-8 md:grid-cols-2 bg-custom-blue-500 text-white rounded-xl'>
+            <div className='p-10 md:p-15 lg:p-20'>
+              <h1  className='text-7xl font-bold font-sans underline-offset-4'>Who <br /> we <br /> are</h1>
               <p className='mt-7 text-2xl sm:text-xl'>"Skill meets opportunity here. Whether you're a freelancer or a client, we’re the bridge to your success."  </p>
               
               {showMore && (
@@ -25,9 +26,9 @@ const About = () => {
                     We are a passionate team focused on creating innovative digital solutions that empower businesses and individuals.
                   </p>
               )}
-              <button className='mt-15 px-6 py-2 lg:ml-50 bg-blue-600 text-white rounded-lg hover:bg-custom-blue-400 transition'  onClick={() => setShowMore(!showMore)} >{showMore ? 'Learn Less' : 'Learn More'}</button>
+              <button className='mt-15 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-custom-blue-400 transition'  onClick={() => setShowMore(!showMore)} >{showMore ? 'Learn Less' : 'Learn More'}</button>
             </div>
-            <div className='bg-white ' >
+            <div className='bg-white' >
               <img src={AboutUs} alt="About Us" />
             </div>
           </section>
