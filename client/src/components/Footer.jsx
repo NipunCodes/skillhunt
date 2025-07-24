@@ -38,9 +38,9 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <a href="/about"><h2 className='text-lg font-bold mb-4'>About Us</h2></a>
+                <h2 className='text-lg font-bold mb-4'>About Us</h2>
                 <ul className='mb-2'>
-                    <li><a href="" className='hover:underline text-black'>About SkillHunt</a></li>
+                    <li><a href="/about" className='hover:underline text-black'>About SkillHunt</a></li>
                     <li><a href="" className='hover:underline text-black'>Help & Support</a></li>
                     <li><a href="" className='hover:underline text-black'>Terms of Service</a></li>
                     <li><a href="" className='hover:underline text-black'>Privacy Policy</a></li>
