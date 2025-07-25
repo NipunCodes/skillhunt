@@ -1,11 +1,13 @@
-import Header from '../components/Navbar.jsx'
 import React from 'react'
+import Sidebar from '../components/Sidebar'
+import Dashboard from '../components/Dashboard'
+
 
 const ClientDashboard = () => {
   return (
-    <div>
-        <Header />
-        <h2>Client Dashboard...chill bruh!!! this is just a test.</h2>
+    <div  className='grid grid-cols-2 gap-4 p-4'>
+      <Sidebar />
+      <Dashboard />
     </div>
   )
 }
