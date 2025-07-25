@@ -3,7 +3,9 @@ import React from 'react'
 const NoPage = () => {
   return (
     <div>
-        <h2>Erroe 404: Not Found</h2>
+      <div className='flex justify-center items-center'>
+        <h2 className='text-2xl'><span className='font-bold text-red-500'>Error 404 : </span>Page Not Found</h2>
+      </div>
     </div>
   )
 }

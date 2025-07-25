@@ -8,8 +8,19 @@ import UserReviewCard from '../components/UserReviewCard.jsx'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Select from 'react-select'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  const handleChange = (selectedOption) => {
+    if (selectedOption.value === 'software engineer') {
+      navigate('/jobcategory');
+    }
+  };
+
   const CategoryCardSettings = {
     dots: true,
     infinite: false,
@@ -92,10 +103,32 @@ const Home = () => {
           <div>
             <h1 className='text-white text-2xl'> <span className='font-bold font-mono text-7xl'>Welcome to SkillHunt</span> <br />Sri Lankan's #1 job oppatunity finding platform</h1>
           </div>
-          <div className="pt-10">
+          <div className="flex pt-10 flex-col sm:flex-row gap-4 items-center">
             <div className="relative w-full max-w-xl">
-              <input type="text" placeholder="   What's on your mind  .  .  . " className="bg-white rounded-full w-full text-base p-2 pr-12"/>
+              <input type="text" placeholder="   What's on your mind  .  .  . " className="bg-white rounded-sm w-full text-base p-2 pr-12"/>
               <IoSearchOutline className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-3xl" />
+            </div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full'>
+              <Select className='md:min-w-40 lg:min-w-64'
+                options={[
+                  { value: 'all', label: 'All Categories' },
+                  { value: 'it', label: 'IT & Software' },
+                  { value: 'design', label: 'Design & Creative' },
+                  { value: 'marketing', label: 'Marketing' },
+                  { value: 'business', label: 'Business' },
+                  { value: 'software engineer', label: 'Software Engineer' }
+                ]}
+                placeholder="Select Category"
+                onChange={handleChange}
+                styles={{
+                control: (baseStyles, state) => ({
+                  ...baseStyles,
+                  borderColor: state.isFocused ? 'lightblue' : 'custom-blue-200',
+                  boxShadow: state.isFocused ? '0 0 0 1px lightblue' : null,
+                  '&:hover': {borderColor: 'lightblue'}
+                  }),
+                }}
+              />
             </div>
           </div>
         </div>
@@ -109,30 +142,22 @@ const Home = () => {
           <div className='w-full mt-4'>
               <div>
                 <Slider {...CategoryCardSettings}>
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
-                <CategoryCard />
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
+                <a href="/JobCategory"><CategoryCard /></a>
                 </Slider>
               </div>
           </div>

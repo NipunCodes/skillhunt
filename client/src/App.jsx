@@ -5,14 +5,12 @@ import Login from './pages/Login.jsx'
 import About from './pages/About.jsx'
 import SignUp from './pages/SignUp.jsx'
 import ClientDashboard from './pages/ClientDashboard.jsx'
+import JobCategory from './pages/JobCategory.jsx'
 import NoPage from './pages/NoPage.jsx'
-import Navbar from './components/Navbar.jsx'
-import Footer from "./components/Footer.jsx"
-
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />
@@ -21,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUp/>} />
         <Route path="/clientdashboard" element={<ClientDashboard />} />
+        <Route path="/jobcategory" element={<JobCategory />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       </BrowserRouter>
