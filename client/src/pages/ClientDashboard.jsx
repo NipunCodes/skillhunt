@@ -5,7 +5,7 @@ import Dashboard from '../components/Dashboard'
 
 const ClientDashboard = () => {
   return (
-    <div  className='grid grid-cols-2 gap-4 p-4'>
+    <div  className='grid gap-4 p-4 grid-cols-[200px_1fr]'>
       <Sidebar />
       <Dashboard />
     </div>
