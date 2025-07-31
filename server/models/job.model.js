@@ -1,11 +1,19 @@
 import mongoose from 'mongoose';
 
 const jobSchema = new mongoose.Schema({
-    title:{
+    jobTitle:{
         type: String,
         required: true
     },
-    category:{
+    shortDescription:{
+        type: String,
+        required: true
+    },
+    jobDescription:{
+        type: String,
+        required: true
+    },
+    jobCategory:{
         type: String,
         required: true
     },

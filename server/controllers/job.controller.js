@@ -3,7 +3,7 @@ import Jobs from '../models/job.model.js';
 // Get all jobs
 export const getAllJobs = async (req, res) => {
     try {
-        const jobs = await Jobs.find({})
+        const jobs = await Jobs.find().sort({ createdAt: -1 });
         res.status(200).json(jobs);
     } catch (error) {
         res.status(500).json({ message: 'Cannot get jobs' });

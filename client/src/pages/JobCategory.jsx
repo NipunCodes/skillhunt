@@ -14,12 +14,12 @@ const JobCategory = () => {
             <h1 className='text-3xl font-bold'>Job Categories</h1>
             <p className='text-gray-600 mt-2'>Explore various job categories available on our platform.</p>
             <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6'>
-                <a href="/jobpage"><JobCategoryCard /></a>
-                <a href="/jobpage"><JobCategoryCard /></a>
-                <a href="/jobpage"><JobCategoryCard /></a>
-                <a href="/jobpage"><JobCategoryCard /></a>
-                <a href="/jobpage"><JobCategoryCard /></a>
-                <a href="/jobpage"><JobCategoryCard /></a> 
+                <JobCategoryCard />
+                <JobCategoryCard />
+                <JobCategoryCard />
+                <JobCategoryCard />
+                <JobCategoryCard />
+                <JobCategoryCard />
             </div>      
         </div>
         <Footer />

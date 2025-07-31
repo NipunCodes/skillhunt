@@ -3,9 +3,9 @@ import { getAllJobs, getJobById, createJob, updateJob, deleteJob } from '../cont
 
 const router = express.Router();
 
-router.get("/", getAllJobs);
+router.get("/jobpage", getAllJobs);
 router.get("/:id", getJobById);
-router.post("/", createJob);
+router.post("/createjobform", createJob);
 router.put("/:id", updateJob);
 router.delete("/:id", deleteJob);
 
