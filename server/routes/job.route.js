@@ -1,11 +1,13 @@
 import express from 'express';
-import { getAllJobs, getJobById, createJob, updateJob, deleteJob } from '../controllers/job.controller.js';
+import { getAllJobs, getJobById, createJob, updateJob, deleteJob, getJobCountsByCategory } from '../controllers/job.controller.js';
+import { upload } from '../config/multer.js';
 
 const router = express.Router();
 
-router.get("/jobpage", getAllJobs);
-router.get("/:id", getJobById);
-router.post("/createjobform", createJob);
+router.get("/category/counts", getJobCountsByCategory); // Get job counts by category
+router.get("/", getAllJobs); // Get all jobs
+router.get("/:id", getJobById); // Get single job by ID
+router.post("/createjobform", upload.single('companyPicture'), createJob);
 router.put("/:id", updateJob);
 router.delete("/:id", deleteJob);
 

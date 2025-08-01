@@ -22,12 +22,32 @@ export const getJobById = async (req, res) => {
 };
 
 // Create a job
+export const getJobCountsByCategory = async (req, res) => {
+    try {
+        const counts = await Jobs.aggregate([
+            { $group: { _id: '$jobCategory', count: { $sum: 1 } } }
+        ]);
+        res.status(200).json(counts);
+    } catch (error) {
+        console.error('Error getting job counts:', error);
+        res.status(500).json({ message: 'Cannot get job counts' });
+    }
+};
+
 export const createJob = async (req, res) => {
     try {
-        const jobs = await Jobs.create(req.body);
+        const jobData = req.body;
+        
+        // If there's a file uploaded, add its path to the job data
+        if (req.file) {
+            jobData.companyPicture = `/uploads/${req.file.filename}`;
+        }
+
+        const jobs = await Jobs.create(jobData);
         res.status(201).json(jobs);
     } catch (error) {
-        res.status(500).json({ message: 'Cannot create a job' });
+        console.error('Error creating job:', error);
+        res.status(500).json({ message: 'Cannot create a job', error: error.message });
     }
 };
 
