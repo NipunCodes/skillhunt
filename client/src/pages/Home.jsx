@@ -16,7 +16,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleChange = (selectedOption) => {
-    if (selectedOption.value === 'software engineer') {
+    if (selectedOption.value === 'all') {
       navigate('/jobcategory');
     }
   };
