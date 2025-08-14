@@ -33,13 +33,13 @@ const Login = () => {
                 </div>
                 <div className='flex flex-col sm:flex-row justify-center sm:space-x-20 space-y-2 sm:space-y-0 p-5'>
                     <label className='text-white' htmlFor="stay-signin"><input type="checkbox" name="stay-signin" id="stay-signin" /> Stay Sign In</label>
-                    <a href="#" className='text-gray-300 hover:text-white hover:underline'>Forget Password</a>
+                    <a href="#" className='text-gray-300 hover:text-white hover:underline'>Forgot Password</a>
                 </div>
                 <div className='flex justify-center items-center p-5'>
                     <button className='bg-custom-blue-400 text-white w-full h-10 border-none rounded-xl cursor-pointer hover:ring-2 hover:ring-custom-blue-500 hover:bg-custom-blue-500' type='submit'>LOGIN</button>
                 </div>
                 <div className='flex justify-center mt-5'>
-                    <label className='text-white' htmlFor="create-account">Don't have an account.</label><a href="#" className='text-gray-300 hover:text-white hover:underline ml-1'> Register</a>
+                    <label className='text-white' htmlFor="create-account">Don't have an account.</label><a href="/signup" className='text-gray-300 hover:text-white hover:underline ml-1'> Register</a>
                 </div>
             </div>
             </div>

@@ -43,16 +43,15 @@ function SignUp() {
               <div className='flex gap-6 justify-between p-5 font-sans sm:flex-row flex-col sm:space-x-6 space-y-4 sm:space-y-0'>
                 <div className='flex flex-col w-full'>
                 <label className='text-white font-semibold text-xl' htmlFor="gender">Gender</label>
-                  {/* <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="firstname" id="firstname"   /> */}
                   <select className='mt-1 bg-white rounded-xl h-8' name="gender" id="gender">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </select>
                 </div>
                 <div className='flex flex-col w-full'>
-                  <label className='text-white font-semibold text-xl' htmlFor="calendar">Calendar</label>
-                  {/* <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="lastname" id="lastname"   /> */}
-                  <input className='mt-1 bg-white rounded-xl h-8' type="date" value={date} onChange={(e) => setDate(e.target.value)} name='calendar' id='calendar'  />
+                  <label className='text-white font-semibold text-xl' htmlFor="calendar">Birthday</label>
+                  {/* <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="date" name="date" id="date"   /> */}
+                  <input className='mt-1 bg-white rounded-xl h-8' type="date" value={date} onChange={(e) => setDate(e.target.value)} name="birthday" id="birthday" />
                 </div>
               </div>
               <div className='flex justify-center items-center p-5'>
