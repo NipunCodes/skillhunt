@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Navbar'
 import Footer from '../components/Footer'
 import bgImg from '../assets/New-Login-Bg.jpg'
 import '../App.css'
 
 function SignUp() {
+
+  const [date, setDate] = useState('');
   
   return (
     <div className='app'>
@@ -38,13 +40,17 @@ function SignUp() {
                 <label className='text-white text-xl font-semibold font-sans' htmlFor="username">User Name</label>
                 <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="username" id="username" />
               </div>
-              <div className='flex gap-6 justify-center p-5 text-xl font-semibold  font-sans sm:flex-row flex-col sm:space-x-6 space-y-4 sm:space-y-0'>
-                <div className='flex flex-col'>
-                <label className='text-white' htmlFor="gender">Gender</label>
-                  <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="firstname" id="firstname"   />
+              <div className='flex gap-6 justify-between p-5 font-sans sm:flex-row flex-col sm:space-x-6 space-y-4 sm:space-y-0'>
+                <div className='flex flex-col w-full'>
+                <label className='text-white font-semibold text-xl' htmlFor="gender">Gender</label>
+                  {/* <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="firstname" id="firstname"   /> */}
+                  <select className='mt-1 bg-white rounded-xl h-8' name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
                 </div>
                 <div className='flex flex-col'>
-                  <label className='text-white' htmlFor="calendar">Birthday</label>
+                  <label className='text-white' htmlFor="calendar">Calendar</label>
                   <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="lastname" id="lastname"   />
                 </div>
               </div>
