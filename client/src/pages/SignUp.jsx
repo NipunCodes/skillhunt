@@ -44,7 +44,7 @@ function SignUp() {
                   <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="firstname" id="firstname"   />
                 </div>
                 <div className='flex flex-col'>
-                  <label className='text-white' htmlFor="calendar">Calendar</label>
+                  <label className='text-white' htmlFor="calendar">Birthday</label>
                   <input className='bg-white border border-gray-300 mt-1 h-10 rounded-xl pr-10 w-full focus:outline-none focus:ring-1 focus:ring-blue-300' type="text" name="lastname" id="lastname"   />
                 </div>
               </div>
