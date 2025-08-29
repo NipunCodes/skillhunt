@@ -9,6 +9,7 @@ import ClientDashboard from './pages/ClientDashboard.jsx'
 import JobCategory from './pages/JobCategory.jsx'
 import CreateJobForm from './pages/CreateJobForm.jsx'
 import NoPage from './pages/NoPage.jsx'
+import JobDetails from './pages/JobDetails.jsx'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/clientdashboard" element={<ClientDashboard />} />
         <Route path="/jobcategory" element={<JobCategory />} />
         <Route path="/createjobform" element={<CreateJobForm />} />
+        <Route path="/jobs/:id" element={<JobDetails />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
       </BrowserRouter>
