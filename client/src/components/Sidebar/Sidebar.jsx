@@ -16,8 +16,8 @@ export const SidebarContext = createContext();
 const Sidebar = () => {
     const [expanded, setExpanded] = useState(true);
   return (
-    <aside className={`${expanded ? "w-56" : "w-18"} h-screen transition-width duration-300 text-white`}>
-        <nav className='h-full flex flex-col bg-white border-r shadow-sm'>
+    <aside className={`${expanded ? "w-56" : "w-18"} h-screen transition-width duration-300`}>
+        <nav className='h-full flex flex-col bg-stone-100'>
             <div className='p-4 pb-2 flex justify-between items-center'>
                 <h2 className={`overflow-hidden transition-all ${expanded ? "w-36 text-3xl font-bold text-black" : "w-0"}`}>SkillHunt</h2>
                 <button onClick={() => setExpanded(curr => !curr)} className='p-1.5 rounded-lg bg-gray-300 hover:bg-gray-600'>
@@ -27,8 +27,8 @@ const Sidebar = () => {
 
             <SidebarContext.Provider value={{expanded}}>
             <ul className='flex-1 px-3 space-y-2 mt-4'>
-            <SidebarItem icon={<LayoutDashboard />} text="Dashboard" alert />
-            <SidebarItem icon={<Folders />} text="Projects" active />
+            <SidebarItem icon={<LayoutDashboard />} text="Dashboard" active />
+            <SidebarItem icon={<Folders />} text="Projects" alert />
             <SidebarItem icon={<MessageCircle />} text="Messages" alert />
             <SidebarItem icon={<Receipt />} text="Payments" />         
             <SidebarItem icon={<UserCircle />} text="Profile" />
