@@ -4,11 +4,11 @@ import { upload } from '../config/multer.js';
 
 const router = express.Router();
 
-router.get("/category/counts", getJobCountsByCategory); // Get job counts by category
-router.get("/", getAllJobs); // Get all jobs
-router.get("/:id", getJobById); // Get single job by ID
-router.post("/createjobform", upload.single('companyPicture'), createJob);
-router.put("/:id", updateJob);
-router.delete("/:id", deleteJob);
+router.get('/category/counts', getJobCountsByCategory); // Get job counts by category
+router.get('/', getAllJobs); // Get all jobs
+router.get('/:id', getJobById); // Get single job by ID
+router.post('/', upload.single('companyPicture'), createJob);
+router.put('/:id', updateJob);
+router.delete('/:id', deleteJob);
 
 export default router;
